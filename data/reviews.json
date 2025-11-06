@@ -1,0 +1,45 @@
+[
+  {
+    "id": "c_aawx306u",
+    "name": "ff15",
+    "email": "geo@gmail.com",
+    "rating": 5,
+    "comment": "dfff",
+    "date": "2025-11-05",
+    "clientId": "c_aawx306u"
+  },
+  {
+    "id": "c_0i1qe7lu",
+    "name": "fsdf",
+    "email": "gogo@gmail.com",
+    "rating": 5,
+    "comment": "fdsfsd",
+    "date": "2025-11-05",
+    "clientId": "c_0i1qe7lu"
+  },
+  {
+    "id": "c_6w6atpg6",
+    "name": "sadsd",
+    "email": "george.zummar.z@gmail.com",
+    "rating": 5,
+    "comment": "dasdasd",
+    "date": "2025-11-05",
+    "clientId": "c_6w6atpg6"
+  },
+  {
+    "id": "r1700000000003@example.com",
+    "name": "Алексей П.",
+    "email": "r1700000000003@example.com",
+    "rating": 5,
+    "comment": "Отличное качество печати и быстрая доставка. Рекомендую!",
+    "date": "2024-09-15"
+  },
+  {
+    "id": "r1700000000004@example.com",
+    "name": "Мария С.",
+    "email": "r1700000000004@example.com",
+    "rating": 4,
+    "comment": "Хорошая работа, чуть задержали срок, но компенсировали.",
+    "date": "2024-11-01"
+  }
+]
