@@ -74,7 +74,7 @@ export default function Home() {
           Почему выбирают нас
         </motion.h2>
 
-        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+        <ul className="flex justify-center gap-8">
           {[
             {
               title: "15+ лет опыта",
@@ -95,7 +95,7 @@ export default function Home() {
           ].map((item, index) => (
             <motion.li
               key={index}
-              className="bg-white p-6 rounded-2xl shadow-md border border-gray-100 hover:shadow-lg transition-all"
+              className="bg-white w-[300px] p-6 rounded-2xl shadow-md border border-gray-100 hover:shadow-lg"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.2, duration: 0.6 }}
