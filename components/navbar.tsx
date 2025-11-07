@@ -1,3 +1,4 @@
+"use client";
 import {
   Navbar as HeroUINavbar,
   NavbarContent,
@@ -14,6 +15,7 @@ import { Input } from "@heroui/input";
 import { link as linkStyles } from "@heroui/theme";
 import NextLink from "next/link";
 import clsx from "clsx";
+import { useState } from "react"; // Import useState
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
@@ -27,6 +29,8 @@ import {
 } from "@/components/icons";
 
 export const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State for menu
+
   const searchInput = (
     <Input
       aria-label="Search"
@@ -48,11 +52,25 @@ export const Navbar = () => {
     />
   );
 
+  // Function to close menu
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
-    <HeroUINavbar maxWidth="xl" position="sticky">
+    <HeroUINavbar 
+      maxWidth="xl" 
+      position="sticky"
+      isMenuOpen={isMenuOpen} // Controlled menu state
+      onMenuOpenChange={setIsMenuOpen} // Update state on change
+    >
       <NavbarContent className="basis-1/5 sm:basis-full" justify="center">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
-          <NextLink className="flex justify-start items-center gap-1" href="/">
+          <NextLink 
+            className="flex justify-start items-center gap-1" 
+            href="/"
+            onClick={closeMenu} // Close menu on logo click
+          >
             <Logo />
             <p className="font-bold text-inherit">ACME</p>
           </NextLink>
@@ -93,7 +111,7 @@ export const Navbar = () => {
         </NavbarItem>
         
         <NavbarItem className="hidden md:flex">
-          
+          {/* Your search input or other content */}
         </NavbarItem>
       </NavbarContent>
 
@@ -102,7 +120,9 @@ export const Navbar = () => {
           <GithubIcon className="text-default-500" />
         </Link>
         <ThemeSwitch />
-        <NavbarMenuToggle />
+        <NavbarMenuToggle 
+          onClick={() => setIsMenuOpen(!isMenuOpen)} // Toggle menu state
+        />
       </NavbarContent>
 
       <NavbarMenu>
@@ -111,16 +131,10 @@ export const Navbar = () => {
           {siteConfig.navMenuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
               <Link
-                // color={
-                //   index === 2
-                //     ? "primary"
-                //     : index === siteConfig.navMenuItems.length - 1
-                //       ? "danger"
-                //       : "foreground"
-                // }
                 color="foreground"
                 href={item.href}
                 size="lg"
+                onClick={closeMenu} // Close menu when link is clicked
               >
                 {item.label}
               </Link>

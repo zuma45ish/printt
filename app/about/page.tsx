@@ -2,7 +2,7 @@ import { title } from "@/components/primitives";
 
 export default function AboutPage() {
   return (
-    <article className="space-y-6 text-left">
+    <article className="min-h-screen bg-base-100 text-neutral py-20 px-6 md:px-8 space-y-6 text-left">
       <h1 className="text-4xl font-bold tracking-tight">О нас</h1>
       <p className="text-lg text-gray-600">
         Компания PrintMasters была основана в 2008 году с одной целью — объединить креативность и точность в мире печати.
