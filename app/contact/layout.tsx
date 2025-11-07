@@ -1,13 +1,17 @@
+import {Providers} from "../providers";
+
 export default function ContactLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-      <div className="inline-block max-w-lg text-center justify-center">
-        {children}
-      </div>
+    <section className="flex flex-col bg-base-100 text-neutral min-h-screen">
+      <Providers>
+          <div className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
+            {children}
+          </div>
+      </Providers>
     </section>
   );
 }
