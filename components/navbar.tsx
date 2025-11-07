@@ -119,7 +119,7 @@ export const Navbar = () => {
                 //       : "foreground"
                 // }
                 color="foreground"
-                href="#"
+                href={item.href}
                 size="lg"
               >
                 {item.label}
